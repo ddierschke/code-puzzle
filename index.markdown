@@ -9,6 +9,11 @@ title: Multiple Parson's Problems on One Page
 
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
+## Parsons 1 (Line Based Grader)
+Re-arrange the blocks below so they print out "Hello World!"
+
+<!-- WICHTIG: Das leere Span-Element muss für js-parsons Toggles auf der Seite existieren -->
+<span class="jsparson-toggle" style="display:none;"></span>
 
 <div id="p1-sortableTrash" class="sortable-code"></div>
 <div id="p1-sortable" class="sortable-code"></div>
@@ -19,22 +24,29 @@ Re-arrange the blocks below so they print out "Hello World!"
 </p>
 <script type="text/javascript">
 (function() {
+  // Wichtig: Doppelte Backslashes für den Zeilenumbruch im String bei Java-Code
   var initial = "$$toggle::public::private$$ class main {\n" +
     "    // Inhalt\n" +
     "}";
+    
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
     "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.VariableCheckGrader, // Geändert zu VariableCheckGrader
+    "grader": ParsonsWidget._graders.LineBasedGrader, // Zurück zum strikten Text-Vergleich!
     "exec_limit": 2500,
     "can_indent": false,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "p1-sortableTrash",
-    "vartests": [] // Bleibt leer, schaltet aber das Toggle-System im UI frei
+    "trashId": "p1-sortableTrash"
   });
+  
   parsonsPuzzle.init(initial);
+  
+  // FIX: Das zwingt den LineBasedGrader, das Fragezeichen durch das klickbare Dropdown zu ersetzen
+  parsonsPuzzle.createHTMLFromVariables(initial); 
+  
   parsonsPuzzle.shuffleLines();
+  
   $("#p1-newInstanceLink").click(function(event){
       event.preventDefault();
       parsonsPuzzle.shuffleLines();
@@ -45,6 +57,7 @@ Re-arrange the blocks below so they print out "Hello World!"
   });
 })();
 </script>
+
 
 
 ## Parsons 2 (Variable Check Grader)
