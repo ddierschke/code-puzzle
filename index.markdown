@@ -20,10 +20,11 @@ Re-arrange the blocks below so they print out "Hello World!"
     <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
 </p>
 
-{% raw %}
 <script type="text/javascript">
 (function() {
-  var initial = "$$toggle::public::private$$ class main {\n" +
+  // Durch das Voranstellen von \ (Backslash) ignorieren Jekyll/MathJax diese Zeile,
+  // aber im Browser kommt exakt die richtige Syntax an!
+  var initial = "\$\$toggle::public::private\$\$ class main {\n" +
     "    // Inhalt\n" +
     "}";
     
@@ -52,7 +53,7 @@ Re-arrange the blocks below so they print out "Hello World!"
   });
 })();
 </script>
-{% endraw %}
+
 
 
 
