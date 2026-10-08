@@ -22,10 +22,9 @@ Re-arrange the blocks below so they print out "Hello World!"
 </p>
 <script type="text/javascript">
 (function() {
-  var initial = "print(\"Hello\")\n" +
-    "print(\" \")\n" +
-    "print(\"World\")\n" +
-    "print(\"!\")";
+  var initial = "$$toggle::public::private$$ class main {\n" +
+    "    // Inhalt\n" +
+    "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
     "max_wrong_lines": 10,
