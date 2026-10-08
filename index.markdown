@@ -8,8 +8,8 @@ title: Multiple Parson's Problems on One Page
 # Parsons Practice
 ## Test
 Text
-<div id="sortableTrash" class="sortable-code"></div> 
-<div id="sortable" class="sortable-code"></div> 
+<div id="p0-sortableTrash" class="sortable-code"></div> 
+<div id="p0-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
     <input id="feedbackLink" value="Get Feedback" type="button" /> 
