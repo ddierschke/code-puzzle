@@ -7,6 +7,7 @@ title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
 ## Test
+## Test
 Text
 <div id="p0-sortableTrash" class="sortable-code"></div> 
 <div id="p0-sortable" class="sortable-code"></div> 
@@ -17,11 +18,11 @@ Text
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "$$toggle::public::private$$ class main { }
-\n" +
-    "// Test";
+  // Der String steht jetzt sauber in einer Reihe unter Verwendung von \n
+  var initial = "$$toggle::public::private$$ class main { }\n// Test";
+  
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "sortable",
+    "sortableId": "p0-sortable", // Präfix "p0-" ergänzt
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LanguageTranslationGrader,
     "exec_limit": 2500,
@@ -30,7 +31,7 @@ Text
     "lang": "en",
     "show_feedback": true,
     "python3": true,
-    "trashId": "sortableTrash",
+    "trashId": "p0-sortableTrash", // Präfix "p0-" ergänzt
     "executable_code": "",
     "programmingLang": "java",
     "vartests": [
@@ -54,6 +55,7 @@ Text
   }); 
 })(); 
 </script>
+
 
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
