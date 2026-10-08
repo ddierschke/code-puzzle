@@ -38,7 +38,7 @@ Re-arrange the blocks below so they print out "Hello World!"
     "x_indent": 50,
     "lang": "en",
     "trashId": "p1-sortableTrash"
-  });
+  }); 
   
   parsonsPuzzle.init(initial);
   
