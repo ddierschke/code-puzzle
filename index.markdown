@@ -19,6 +19,8 @@ Re-arrange the blocks below so they print out "Hello World!"
     <input id="p1-feedbackLink" value="Get Feedback" type="button" />
     <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
 </p>
+
+{% raw %}
 <script type="text/javascript">
 (function() {
   var initial = "$$toggle::public::private$$ class main {\n" +
@@ -50,6 +52,8 @@ Re-arrange the blocks below so they print out "Hello World!"
   });
 })();
 </script>
+{% endraw %}
+
 
 
 ## Parsons 2 (Variable Check Grader)
