@@ -25,12 +25,13 @@ Re-arrange the blocks below so they print out "Hello World!"
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
     "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "grader": ParsonsWidget._graders.VariableCheckGrader, // Geändert zu VariableCheckGrader
     "exec_limit": 2500,
     "can_indent": false,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "p1-sortableTrash"
+    "trashId": "p1-sortableTrash",
+    "vartests": [] // Bleibt leer, schaltet aber das Toggle-System im UI frei
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
