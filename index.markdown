@@ -9,53 +9,6 @@ title: Multiple Parson's Problems on One Page
 ## Test
 ## Test
 Text
-<div id="p0-sortableTrash" class="sortable-code"></div> 
-<div id="p0-sortable" class="sortable-code"></div> 
-<div style="clear:both;"></div> 
-<p> 
-    <input id="feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="newInstanceLink" value="Reset Problem" type="button" /> 
-</p> 
-<script type="text/javascript"> 
-(function(){
-  // Der String steht jetzt sauber in einer Reihe unter Verwendung von \n
-  var initial = "$$toggle::public::private$$ class main { }\n// Test";
-  
-  var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "p0-sortable", // Präfix "p0-" ergänzt
-    "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LanguageTranslationGrader,
-    "exec_limit": 2500,
-    "can_indent": true,
-    "x_indent": 50,
-    "lang": "en",
-    "show_feedback": true,
-    "python3": true,
-    "trashId": "p0-sortableTrash", // Präfix "p0-" ergänzt
-    "executable_code": "",
-    "programmingLang": "java",
-    "vartests": [
-        {
-            "message": "",
-            "initcode": "",
-            "code": "",
-            "variables": {}
-        }
-    ]
-  });
-  parsonsPuzzle.init(initial);
-  parsonsPuzzle.shuffleLines();
-  $("#newInstanceLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.shuffleLines(); 
-  }); 
-  $("#feedbackLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.getFeedback(); 
-  }); 
-})(); 
-</script>
-
 
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
