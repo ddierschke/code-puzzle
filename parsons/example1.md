@@ -14,11 +14,7 @@ Construct a program that swaps the values of variables <code>x</code> and <code>
 </p>
 <script type="text/javascript">
 (function(){
-  var initial = "$$toggle::public::private$$ main() 
-\n" +
-    "{
-\n" +
-    "}";
+  var initial = "$$toggle::public::private$$ main()\n" + "{\n" + "}";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
     "max_wrong_lines": 10,
